@@ -14,9 +14,9 @@ def get_tarefas():
     tarefas = buscar_tarefas()
     return tarefas
 
-@app.route('/api/tarefa', methods=['GET'])
-def get_tarefa():
-    tarefa = buscar_tarefa()
+@app.route('/api/tarefa/<int:todo_id>', methods=['GET'])
+def get_tarefa(todo_id):
+    tarefa = buscar_tarefa(todo_id)
     return tarefa
 
 if __name__ == '__main__':
